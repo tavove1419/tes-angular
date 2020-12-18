@@ -10,6 +10,7 @@ import { from } from 'rxjs';
 import { AuthenticationGuard } from 'src/guards/authentication.guard';
 import {ButtonModule} from 'primeng/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CarouselModule} from 'primeng/carousel';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProgressSpinnerModule,
     ButtonModule,
     BrowserAnimationsModule,
+    CarouselModule
    
   ],
   providers: [AuthenticationGuard],

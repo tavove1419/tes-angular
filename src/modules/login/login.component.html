@@ -1,20 +1,22 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<p-toast></p-toast>
+
 <div class="sidenav">
-    <div class="login-main-text">
-    <h2>Bienvenidos<br></h2>
-    <br>
-    <img src='assets/img/img1.jpg' class='imgRedonda' />
-    
-</div>
+    <div class="circle">
+     <img src='../../assets/img/pet.svg' class='imgRedonda' />
+    </div>
 </div>
 <div class="main">
+    <p-toast></p-toast>
     <div class="col-md-6 col-sm-12" *ngIf="!isLoading">
         <div class="login-form">
             <form [formGroup]="formLogin">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 vl">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <h2 >Bienvenidos</h2>
+                    </div>
+                </div>
+                <br>
                 <div class="form-group">
                     <label>Usuario</label>
                     <input type="email" formControlName="user" class="form-control" placeholder="Email">
@@ -31,24 +33,24 @@
                 </div>
                 <div class="form-group">
                     <label>Contraseña</label>
-                    <input type="password" formControlName="pass" class="form-control" placeholder="">
+                    <input type="password" formControlName="pass" class="form-control" placeholder="Contraseña">
                     <div *ngIf="formLogin.get('pass').errors && formLogin.get('pass').dirty || formLogin.get('pass').touched">
                         <small class="p-invalid" *ngIf="formLogin.get('pass').hasError('required')">
                             La Contraseña es requerida!
                         </small>
                     </div>
                 </div>
-                <div>
-                    <a href="/recuperar">¿Olvidastes tu contraseña?</a>
+                <div style="text-align: right; font-size: small;">
+                    <p>¿Olvidastes tu contraseña?</p>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-black" (click)="login()" [disabled]="!formLogin.valid">Ingresar</button>
-                <br>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-black" (click)="login()" [disabled]="!formLogin.valid">Inicar Sesión</button>
+                </div>
                 <br>
                 <div>
-                    <p>AUN NO TENGO CUENTA <a href="/registrar">REGISTRARSE</a></p>
+                    <p style="font-size: x-small; text-align: center;">AUN NO TENGO CUENTA <a href="/registrar">REGISTRARSE</a></p>
                 </div>
-                <!-- <button type="submit" class="btn btn-secondary" style="margin-left: 15px;">Register</button> -->
             </form>
         </div>
     </div>

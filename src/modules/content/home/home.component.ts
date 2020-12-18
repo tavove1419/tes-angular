@@ -1,5 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface Product {
+  id?:string;
+  code?:string;
+  name?:string;
+  description?:string;
+  price?:number;
+  quantity?:number;
+  inventoryStatus?:string;
+  category?:string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +17,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  products: Product[];
+  responsiveOptions;
+  
+  constructor() { 
+    this.responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+   }
 
   ngOnInit(): void {
+    this.products = [];
   }
 
 }

@@ -1,11 +1,33 @@
+:root {
+
+/* Colors: */
+--unnamed-color-ff6752: #FF6752;
+--unnamed-color-4487ff: #4487FF;
+--unnamed-color-f8f8f8: #F8F8F8;
+--unnamed-color-00225c: #00225C;
+--unnamed-color-808080: #808080;
+--unnamed-color-fd6845: #FD6845;
+--unnamed-color-b1bbcd: #B1BBCD;
+--unnamed-color-fe6845: #FE6845;
+--unnamed-color-7569de: #7569DE;
+--unnamed-color-ffa046: #FFA046;
+--unnamed-color-9ecb45: #9ECB45;
+}
+
+.main {
+    background: var(--unnamed-color-ff6752);
+}
 body {
     font-family: "Lato", sans-serif;
 }
 
 .imgRedonda {
-    width:310px;
-    height:300px;
-    border-radius:150px;
+    margin-top: 75px;
+    margin-left: 80px;
+    width: 195px;
+    height: 232px;
+    background: transparent url('../../assets/img/pet.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
 
 .main-head{
@@ -20,10 +42,33 @@ body {
 }
 
 .sidenav {
-    height: 100%;
-    background-color: rgba(250, 25, 25, 0.432);
-    overflow-x: hidden;
-    padding-top: 20px;
+    top: 4651px;
+    left: -712px;
+    width: 3306px;
+    height: 882px;
+    background: var(--unnamed-color-ff6752) 0% 0% no-repeat padding-box;
+    background: #FF6752 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 10px 10px;
+    opacity: 1;
+}
+
+.vl {
+    border-left: 6px solid #FF6752;
+    height: 50px;
+    position: absolute;
+    margin-left: -18px;
+    left: 5%;
+    top: -4px;
+  }
+
+.circle {
+    margin-top: 129px;
+    margin-left: 69px;
+    width: 365px;
+    height: 365px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 250px;
 }
 
 
@@ -80,8 +125,13 @@ body {
 }
 
 .btn-black{
-    background-color: #000 !important;
+//    background-color: #4487ff!important;
     color: #fff;
+    background: #4487FF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #2C1DAD29;
+    border-radius: 38px;
+    opacity: 1;
+    
 }
 
 @keyframes p-progress-spinner-color {

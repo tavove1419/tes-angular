@@ -12,6 +12,7 @@ import {FieldsetModule} from 'primeng/fieldset';
 import { LocationComponent } from './location/location.component';
 import { BlogComponent } from './blog/blog.component';
 import { ServicesComponent } from './services/services.component';
+import {CarouselModule} from 'primeng/carousel';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ServicesComponent } from './services/services.component';
     CardModule,
     ScrollPanelModule,
     FieldsetModule,
-    
+    CarouselModule
   ]
 })
 export class ContentModule { }

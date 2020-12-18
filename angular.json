@@ -248,6 +248,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tes-angular"
+    }
+  },
+  "defaultProject": "tes-angular",
+  "cli": {
+    "analytics": "8bfe4983-3fdf-47a1-a4ce-88437ef2400d"
+  }
 }
