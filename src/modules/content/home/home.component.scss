@@ -1,3 +1,36 @@
+.contornoMedioCirculo {
+    top: 400px;
+    left: 180px;
+    position:relative;
+    background-color:Red;
+    width:280px;
+    height:280px;
+    border-radius:50% 50%;
+    
+}
+.contornoMedioCirculo::before {
+    position:absolute;
+    content:"";
+    top:1%;
+    left:1%;
+    background-Color:#fff;
+    height:98%;
+    width:98%;
+    border-radius:50% 50%;
+}
+.contornoMedioCirculo::after {
+    position:absolute;
+    content:"";
+    height:50%;
+    background-Color:#fff;
+    border:1px solid #fff;
+    top:50%;
+    left:0;
+    width:100%;
+}
+.contornoMedioCirculo.derecha {
+    transform:rotate(90deg);
+}
 
 .border-circle {
     padding-top: 130px;

@@ -22,11 +22,11 @@ body {
 }
 
 .imgRedonda {
-    margin-top: 75px;
-    margin-left: 80px;
+    margin-top: 45px;
+    margin-left: 30px;
     width: 195px;
-    height: 232px;
-    background: transparent url('../../assets/img/pet.svg') 0% 0% no-repeat padding-box;
+    height: 182px;
+    // background: transparent url('../../assets/img/pet.svg') 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
@@ -44,12 +44,15 @@ body {
 .sidenav {
     top: 4651px;
     left: -712px;
-    width: 3306px;
+    width: 800px;
     height: 882px;
     background: var(--unnamed-color-ff6752) 0% 0% no-repeat padding-box;
     background: #FF6752 0% 0% no-repeat padding-box;
     border-radius: 0px 0px 10px 10px;
     opacity: 1;
+    // clip-path: ellipse(102px 129px at 84.05% 19.05%);
+    //clip-path: polygon(0px 0px, 540px 0px, 491px 18px, 446px 37px, 418px 54px, 397px 72px, 377px 92px, 368px 104px, 362px 119px, 358px 139px, 363px 154px, 375px 170px, 389px 198px, 410px 243px, 425px 280px, 448px 332px, 461px 359px, 469px 380px, 475px 404px, 481px 430px, 540px 882px, 0px 882px);
+    // clip-path: polygon(0px 0px, 766px 1px, 600px 44px, 570px 58px, 538px 82px, 500px 108px, 466px 136px, 451px 175px, 461px 218px, 506px 439px, 548px 623px, 546px 882px, 0px 882px);
 }
 
 .vl {
@@ -62,15 +65,31 @@ body {
   }
 
 .circle {
-    margin-top: 129px;
+    margin-top: 179px;
     margin-left: 69px;
-    width: 365px;
-    height: 365px;
+    width: 265px;
+    height:265px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     border-radius: 250px;
 }
 
+.poligon {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 30px 10px 0 #d9534f;
+    -webkit-box-shadow: 30px 10px 0 #d9534f;
+    box-shadow: 30px 10px 0 #d9534f;
+    transform:rotate(90deg);
+    // width: 250px;
+    // height: 250px;
+    // clip-path: circle(334px at 27.7% 17.65%);
+    // background: #fff;
+    //clip-path: polygon(0px 0px, 766px 1px, 600px 44px, 570px 58px, 538px 82px, 500px 108px, 466px 136px, 451px 175px, 461px 218px, 506px 439px, 548px 623px, 546px 882px, 0px 882px);
+}
 
 .main {
     padding: 0px 10px;
@@ -82,7 +101,7 @@ body {
 
 @media screen and (max-width: 450px) {
     .login-form{
-        margin-top: 10%;
+        margin-top: 0%;
     }
 
     .register-form{
