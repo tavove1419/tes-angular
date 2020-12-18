@@ -77,7 +77,7 @@ export class LoginComponent implements OnInit {
 
   async isLogged() {
     if(this.authenticationService.isLogged()) {
-      this.route.navigateByUrl('home/inicio');
+      this.route.navigateByUrl('inicio');
     }
   }
 

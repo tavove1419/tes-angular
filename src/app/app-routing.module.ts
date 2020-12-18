@@ -16,7 +16,7 @@ const routes: Routes = [
       import('src/modules/login/login.module').then((m) => m.LoginModule),
   },
   {
-    path: 'home',
+    path: '',
     canActivate: [AuthenticationGuard],
     loadChildren: () =>
       import('src/modules/content/content.module').then((m) => m.ContentModule),
