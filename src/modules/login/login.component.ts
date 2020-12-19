@@ -56,7 +56,6 @@ export class LoginComponent implements OnInit {
       }
       
       this.loginService.isLogin(this.dataLogin).subscribe(res => {
-        debugger
         if (res.token) {
           sessionStorage.setItem('Token', res.token);
         } else {
