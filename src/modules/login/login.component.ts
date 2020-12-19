@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder} from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/services/autentication/authentication.service';
 import { LoginService } from './../../services/login.service';
-import {MessageService} from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 export interface Logueo {
   email: string;
@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
     private route: Router,
     private authenticationService: AuthenticationService,
     private messageService: MessageService
-  ) { 
-    
+  ) {
+
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
   private createForm(): void {
-    this.formLogin = this.fb.group ({
+    this.formLogin = this.fb.group({
       user: [null, [Validators.required, Validators.email]],
       pass: [null, [Validators.required]]
     });
@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         email: dataForm.user,
         password: dataForm.pass
       }
-      
+
       this.loginService.isLogin(this.dataLogin).subscribe(res => {
         if (res.token) {
           sessionStorage.setItem('Token', res.token);
@@ -64,19 +64,19 @@ export class LoginComponent implements OnInit {
         }
         this.isLogged();
       }, (error: any) => {
-        this.messageService.add({severity:'error', summary: 'Usuario no Encontrado', detail: 'Validar correo y contraseña'});
+        this.messageService.add({ severity: 'error', summary: 'Usuario no Encontrado', detail: 'Validar correo y contraseña' });
         this.isLoading = false;
         return error
       });
-      
+
     } else {
-      this.messageService.add({severity:'error', summary: 'Error', detail: 'Validar información ingresada'});
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Validar información ingresada' });
     }
-    
+
   }
 
   async isLogged() {
-    if(this.authenticationService.isLogged()) {
+    if (this.authenticationService.isLogged()) {
       this.route.navigateByUrl('inicio');
     }
   }
